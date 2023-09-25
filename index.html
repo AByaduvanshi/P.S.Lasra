@@ -10,11 +10,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" integrity="sha512-SJw7jzjMYJhsEnN/BuxTWXkezA2cRanuB8TdCNMXFJjxG9ZGSKOX5P3j03H6kdMxalKHZ7vlBMB4CagFP/de0A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
    
     <script src="js/bootstrap.js"></script>
+    <style>
+      #preloader{
+        background: #000 url( img/loading.gif) no-repeat center center; 
+        background-color: white;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+      }
+    </style>
  
     
 </head>
 <body>
- 
+ <div id="preloader"></div>
 
     <!--Top start-->
     <div class="container-fluid bg-success ">
@@ -251,7 +261,9 @@
          
       </div>
   </div>
-    <!--aend-->
+   
+
+
     <!--2 event-->
      <div class="container-fluid mt-5">
       <div class="row">
@@ -375,6 +387,14 @@
       </div>
     </div>
 
+
+    <script>
+      var loader = document.getElementById("preloader");
+
+      window.addEventListener("load", function(){
+        loader.style.display ="none";
+      })
+    </script>
   
 </body>
                     
